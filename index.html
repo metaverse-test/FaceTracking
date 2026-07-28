@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Faciale 3D - Three.js + MediaPipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <canvas id="output"></canvas>
+        <video id="webcam" autoplay playsinline style="display: none;"></video>
+        
+        <div id="ui">
+            <div class="panel">
+                <h1>🎭 Animation Faciale 3D</h1>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <span class="label">Modèle</span>
+                        <span id="modelName" class="value">Chargement...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Blendshapes</span>
+                        <span id="blendshapeCount" class="value">0</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">MediaPipe</span>
+                        <span id="mediapipeStatus" class="value status-inactive">Inactif</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Caméra</span>
+                        <span id="cameraStatus" class="value status-inactive">Inactive</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">FPS</span>
+                        <span id="fps" class="value">0</span>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-start">🎥 Activer caméra</button>
+                    <button id="stopBtn" class="btn btn-stop" disabled>⏹️ Désactiver caméra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

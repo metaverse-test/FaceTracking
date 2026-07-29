@@ -15,8 +15,8 @@ export class CameraManager {
             10
         );
         
-        this.camera.position.set(0, 0, 0.5);
-        this.camera.lookAt(0, 0, 0);
+        this.camera.position.set(0, 1, 1.5);
+        this.camera.lookAt(0, 0.1, 0);
         
         // Configuration responsive
         window.addEventListener('resize', () => this.onResize());

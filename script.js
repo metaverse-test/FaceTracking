@@ -1,4 +1,5 @@
 // Point d'entrée principal
+import * as THREE from "three";
 import { SceneManager } from './js/scene.js';
 import { CameraManager } from './js/camera.js';
 import { RendererManager } from './js/renderer.js';
@@ -18,7 +19,7 @@ class App {
         this.mediapipe = new MediaPipeManager();
         this.animation = new AnimationManager();
         this.ui = new UIManager();
-        
+        this.clock = new THREE.Clock();
         this.isRunning = false;
         this.lastTime = 0;
         this.frameCount = 0;

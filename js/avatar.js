@@ -57,7 +57,8 @@ export class AvatarManager {
                     const box = new THREE.Box3().setFromObject(this.model);
                     const center = box.getCenter(new THREE.Vector3());
                     this.model.position.sub(center);
-                    
+                    this.model.scale.setScalar(8);
+this.model.position.set(0, -0.2, 0);
                     scene.add(this.model);
                     
                     console.log(`✅ Modèle chargé: ${this.blendshapeMapper.getBlendshapeCount()} blendshapes détectés`);

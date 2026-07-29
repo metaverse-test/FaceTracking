@@ -60,6 +60,8 @@ export class AvatarManager {
                     // if (size > 0.5) this.model.scale.setScalar(0.5 / size);
                     
                     scene.add(this.model);
+                    console.log(this.model);
+                    console.log("Nombre d'enfants :", this.model.children.length)            
                     console.log(`✅ Modèle chargé: ${this.blendshapeMapper.getBlendshapeCount()} blendshapes`);
                     resolve(this.model);
                 },

@@ -63,6 +63,12 @@ export class AvatarManager {
                     console.log(this.model);
                     console.log("Nombre d'enfants :", this.model.children.length)            
                     console.log(`✅ Modèle chargé: ${this.blendshapeMapper.getBlendshapeCount()} blendshapes`);
+                    const box = new THREE.Box3().setFromObject(this.model);
+                    const size = box.getSize(new THREE.Vector3());
+
+                    console.log("Largeur :", size.x);
+                    console.log("Hauteur :", size.y);
+                    console.log("Profondeur :", size.z);.   
                     resolve(this.model);
                 },
                 (progress) => {
